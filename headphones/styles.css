@@ -1,0 +1,226 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #ff3366;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Source Sans Pro";
+  height: 2000px;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+/*Header*/
+header {
+  background-image: url(./assests/headphones_hero_1.jpg);
+  background-position: center;
+  background-size: 200vh;
+  height: 100vh;
+  padding: 20px;
+}
+.btn-hidden {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  visibility: hidden;
+}
+.btn-hidden span {
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.btn-hidden span:first-child {
+  width: 100%;
+}
+.btn-hidden span:nth-child(2) {
+  width: 60%;
+}
+.btn-hidden span:last-child {
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .logo {
+  width: 180px;
+}
+header .links {
+  list-style: none;
+  display: flex;
+}
+header .links a {
+  text-decoration: none;
+  color: #f6f6f6;
+  padding-left: 30px;
+}
+header li:hover a {
+  color: var(--main-color);
+}
+.main-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  padding-top: 15%;
+  & h2 {
+    color: white;
+    margin-bottom: 5px;
+  }
+  & p {
+    color: white;
+    margin-bottom: 40px;
+  }
+}
+.btn,
+.pragraph {
+  text-align: center;
+}
+.btn0 {
+  padding: 10px;
+  background-color: var(--main-color);
+  border-radius: 30px;
+  text-decoration: none;
+  color: #f6f6f6;
+  border: none;
+}
+.pragraph {
+  color: white;
+  margin-top: 40px;
+}
+/*Header*/
+/*Section 1*/
+.what-we-do {
+  text-align: center;
+  padding: 50px 0;
+  color: black;
+}
+.what-we-do p {
+  margin-top: 20px;
+}
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+  gap: 10px;
+}
+.icon i {
+  font-size: 50px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+/*Section 1*/
+
+.Our-results {
+  background-image: url(./assests/headphones_hero_2.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 20px 0;
+  text-align: center;
+}
+.result h2 {
+  margin-top: 50px;
+  color: white;
+}
+.result p {
+  color: white;
+  margin: 50px auto;
+  width: 70%;
+}
+
+.image {
+  background-image: url(./assests/pentagone.png);
+  width: 153px;
+  height: 145px;
+  background-size: cover;
+  color: #f6f6f6;
+  padding: 41px 10px;
+  margin: auto;
+}
+.image h2 {
+  font-size: 35px;
+}
+.Form {
+  padding: 20px 0;
+  text-align: center;
+}
+.Form h2 {
+  margin-bottom: 20px;
+}
+
+.Form input {
+  width: 270px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #071629;
+  height: 170px;
+}
+footer img {
+  width: 180px;
+  transform: translate(10px, 80px);
+}
+footer p {
+  text-align: center;
+  color: #ffffff;
+}
+footer .ic {
+  display: flex;
+  color: #f6f6f6;
+  justify-content: flex-end;
+  padding: 45px 70px;
+}
+footer .ic i {
+  margin-right: 20px;
+}
+
+@media (max-width: 1010px) {
+  .icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  .icons {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    visibility: hidden;
+  }
+  .links li {
+    margin-bottom: 15px;
+  }
+  .logo {
+    justify-content: flex-start;
+  }
+  .btn-hidden {
+    float: right;
+    visibility: visible;
+    order: 3;
+  }
+  .btn-hidden:focus + ul {
+    visibility: visible;
+  }
+}
